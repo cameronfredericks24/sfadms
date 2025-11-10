@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://www.salesforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <description>Distributor Portal for self-service GRN, Inventory, Orders, and Claims</description>
+    <enableInvitation>false</enableInvitation>
+    <label>Distributor Portal</label>
+    <loginUrl>https://yourinstance.force.com/distributor</loginUrl>
+    <logoutUrl>https://yourinstance.force.com/distributor/logout</logoutUrl>
+    <selfRegistration>false</selfRegistration>
+    <siteAsContainerEnabled>true</siteAsContainerEnabled>
+    <status>Live</status>
+    <urlPathPrefix>distributor</urlPathPrefix>
+</Network>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://www.salesforce.com/2006/04/metadata">
+    <fullName>Distributor_Required</fullName>
+    <active>true</active>
+    <description>Distributor is required</description>
+    <errorConditionFormula>ISBLANK(Distributor__c)</errorConditionFormula>
+    <errorDisplayField>Distributor__c</errorDisplayField>
+    <errorMessage>Distributor is required</errorMessage>
+</ValidationRule>

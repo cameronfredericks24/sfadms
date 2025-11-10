@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Order Cart">
+        <div class="slds-p-around_medium">
+            <lightning-button label="Add Product" onclick={handleAddProduct}></lightning-button>
+            <div class="slds-m-top_medium">
+                <template if:true={hasOrderLines}>
+                    <template for:each={orderLines} for:item="line">
+                        <div key={line.id} class="slds-p-around_small">
+                            {line.productName} - Qty: {line.qty} - Amount: {line.netAmount}
+                        </div>
+                    </template>
+                </template>
+                <template if:false={hasOrderLines}>
+                    <p>No items in cart</p>
+                </template>
+            </div>
+            <div class="slds-m-top_large">
+                <lightning-button label="Apply Promotions" onclick={handleApplyPromotions}></lightning-button>
+                <div class="slds-text-heading_medium slds-m-top_medium">
+                    Total: {totalAmount}
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

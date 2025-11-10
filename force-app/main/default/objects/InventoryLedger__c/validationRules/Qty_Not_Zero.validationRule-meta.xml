@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://www.salesforce.com/2006/04/metadata">
+    <fullName>Qty_Not_Zero</fullName>
+    <active>true</active>
+    <description>Quantity must not be zero</description>
+    <errorConditionFormula>Qty__c = 0</errorConditionFormula>
+    <errorDisplayField>Qty__c</errorDisplayField>
+    <errorMessage>Quantity must not be zero</errorMessage>
+</ValidationRule>

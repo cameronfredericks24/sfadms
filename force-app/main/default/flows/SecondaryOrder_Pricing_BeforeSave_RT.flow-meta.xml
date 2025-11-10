@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://www.salesforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <description>Applies pricing engine to SecondaryOrder before save</description>
+    <environments>Default</environments>
+    <interviewLabel>SecondaryOrder_Pricing_BeforeSave_RT {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SecondaryOrder Pricing BeforeSave RT</label>
+    <processMetadataValues>
+        <nameBuilderType>escalation</nameBuilderType>
+        <processType>AutoLaunchedFlow</processType>
+        <builderType>LightningFlowBuilder</builderType>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ApplyPricing</targetReference>
+        </connector>
+        <object>SecondaryOrder__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <actionCalls>
+        <name>ApplyPricing</name>
+        <label>Apply Pricing Engine</label>
+        <locationX>50</locationX>
+        <locationY>100</locationY>
+        <actionName>Apply_Pricing_Engine</actionName>
+        <actionType>apex</actionType>
+        <apexClass>rcg.PricingEngine</apexClass>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>orderId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+</Flow>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingSet xmlns="http://www.salesforce.com/2006/04/metadata">
+    <accessMappings>
+        <field>AccountId</field>
+        <permissions>Read</permissions>
+        <sharingSetField>Account__c</sharingSetField>
+    </accessMappings>
+    <description>Sharing set for Distributor Portal - restricts access by Account ownership</description>
+    <name>Distributor Sharing Set</name>
+    <profiles>Distributor_Portal_User</profiles>
+</SharingSet>

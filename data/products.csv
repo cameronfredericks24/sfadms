@@ -1,0 +1,31 @@
+SKU,Name,Brand,Category,PackSize,UoM,TaxCategory,ShelfLifeDays
+PROD-001,Cola 500ml,Coca-Cola,Soft Drinks,500ml,EA,Standard,365
+PROD-002,Cola 1L,Coca-Cola,Soft Drinks,1L,EA,Standard,365
+PROD-003,Cola 2L,Coca-Cola,Soft Drinks,2L,EA,Standard,365
+PROD-004,Pepsi 500ml,Pepsi,Soft Drinks,500ml,EA,Standard,365
+PROD-005,Pepsi 1L,Pepsi,Soft Drinks,1L,EA,Standard,365
+PROD-006,Water 500ml,Aqua,Water,500ml,EA,Standard,730
+PROD-007,Water 1L,Aqua,Water,1L,EA,Standard,730
+PROD-008,Chips 50g,Lays,Snacks,50g,EA,Standard,180
+PROD-009,Chips 100g,Lays,Snacks,100g,EA,Standard,180
+PROD-010,Cookies 200g,Oreo,Biscuits,200g,EA,Standard,365
+PROD-011,Cookies 400g,Oreo,Biscuits,400g,EA,Standard,365
+PROD-012,Chocolate 50g,Cadbury,Confectionery,50g,EA,Standard,365
+PROD-013,Chocolate 100g,Cadbury,Confectionery,100g,EA,Standard,365
+PROD-014,Bread 400g,Sunbeam,Bakery,400g,EA,Standard,3
+PROD-015,Milk 1L,Amul,Dairy,1L,EA,Standard,7
+PROD-016,Yogurt 200g,Amul,Dairy,200g,EA,Standard,14
+PROD-017,Rice 1kg,Basmati,Grains,1kg,EA,Standard,730
+PROD-018,Rice 5kg,Basmati,Grains,5kg,EA,Standard,730
+PROD-019,Oil 1L,Sunflower,Cooking,1L,EA,Standard,730
+PROD-020,Oil 5L,Sunflower,Cooking,5L,EA,Standard,730
+PROD-021,Salt 500g,Tata,Spices,500g,EA,Standard,1095
+PROD-022,Sugar 1kg,Tata,Sweeteners,1kg,EA,Standard,730
+PROD-023,Tea 250g,Tata,Beverages,250g,EA,Standard,730
+PROD-024,Coffee 200g,Nescafe,Beverages,200g,EA,Standard,730
+PROD-025,Soap 100g,Lux,Personal Care,100g,EA,Standard,1095
+PROD-026,Shampoo 200ml,Pantene,Personal Care,200ml,EA,Standard,1095
+PROD-027,Toothpaste 100g,Colgate,Personal Care,100g,EA,Standard,1095
+PROD-028,Detergent 500g,Ariel,Household,500g,EA,Standard,730
+PROD-029,Detergent 1kg,Ariel,Household,1kg,EA,Standard,730
+PROD-030,Batteries AA,Duracell,Electronics,4pack,EA,Standard,1825

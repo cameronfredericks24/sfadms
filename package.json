@@ -1,0 +1,25 @@
+{
+  "name": "rcg-retail-execution-dms",
+  "version": "1.0.0",
+  "description": "Retail Execution + Distributor Management System for Salesforce",
+  "scripts": {
+    "lint": "npm run lint:apex && npm run lint:lwc",
+    "lint:apex": "sf apex run pmd --format json --output-dir .pmd-results || true",
+    "lint:lwc": "sf project run lint --source-dir force-app/main/default/lwc",
+    "test": "sf apex run test --code-coverage --result-format human --wait 10",
+    "test:coverage": "sf apex run test --code-coverage --result-format json --wait 10",
+    "validate": "./scripts/validate.sh"
+  },
+  "devDependencies": {
+    "@salesforce/eslint-config-lwc": "^3.0.0",
+    "@salesforce/eslint-plugin-lightning": "^1.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourorg/rcg-retail-execution-dms.git"
+  },
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "RCG Mobile",
+  "displayName": "RCG Retail Execution",
+  "expo": {
+    "name": "RCG Mobile",
+    "slug": "rcg-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "scheme": "rcgmobile"
+  }
+}
