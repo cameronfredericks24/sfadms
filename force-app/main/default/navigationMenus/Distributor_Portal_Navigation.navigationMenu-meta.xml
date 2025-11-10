@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://www.soap.sforce.com/2006/04/metadata">
+    <label>Distributor Portal Navigation</label>
+    <menuType>Standard</menuType>
+    <navigationMenuItem>
+        <label>Home</label>
+        <name>Home</name>
+        <type>InternalLink</type>
+        <url>/s</url>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>GRN</label>
+        <name>GRN__c</name>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Inventory Ledger</label>
+        <name>InventoryLedger__c</name>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Primary Order</label>
+        <name>PrimaryOrder__c</name>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Replenishment Proposal</label>
+        <name>ReplenishmentProposal__c</name>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Claim</label>
+        <name>Claim__c</name>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Invoice</label>
+        <name>Invoice__c</name>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+</NavigationMenu>

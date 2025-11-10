@@ -1,0 +1,23 @@
+{
+  "name": "rcg-retail-execution-dms",
+  "version": "1.0.0",
+  "description": "Retail Execution + DMS Asset for Salesforce",
+  "scripts": {
+    "lint": "npm run lint:apex && npm run lint:lwc",
+    "lint:apex": "sf apex run pmd --rulesets force-app/main/default/.pmd/apex-ruleset.xml",
+    "lint:lwc": "eslint force-app/main/default/lwc/**/*.js",
+    "test": "sf apex run test --code-coverage --result-format human --wait 10",
+    "test:coverage": "sf apex run test --code-coverage --result-format json --wait 10",
+    "validate": "./scripts/validate.sh",
+    "format": "prettier --write \"force-app/**/*.{js,json,md}\""
+  },
+  "devDependencies": {
+    "@salesforce/eslint-config-lwc": "^3.0.0",
+    "@salesforce/eslint-plugin-aura": "^2.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

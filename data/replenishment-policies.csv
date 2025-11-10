@@ -1,0 +1,6 @@
+Distributor,SKU,MinQty,MaxQty,DaysCover,SafetyStock,LeadTimeDays,AutoFlag
+Distributor A,PROD-001,100,10000,30,500,7,true
+Distributor A,PROD-002,50,5000,30,250,7,true
+Distributor B,PROD-003,200,20000,45,1000,14,false
+Distributor B,PROD-004,100,10000,45,500,14,false
+Distributor C,PROD-005,150,15000,30,750,7,true

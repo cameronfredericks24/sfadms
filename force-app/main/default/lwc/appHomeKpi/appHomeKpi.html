@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="KPI Dashboard" icon-name="standard:dashboard">
+        <div class="slds-grid slds-gutters slds-m-around_medium">
+            <div class="slds-col slds-size_1-of-4">
+                <div class="slds-text-align_center">
+                    <div class="slds-text-heading_large">{coverage}%</div>
+                    <div class="slds-text-body_small">Coverage</div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <div class="slds-text-align_center">
+                    <div class="slds-text-heading_large">{hitRate}%</div>
+                    <div class="slds-text-body_small">Hit Rate</div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <div class="slds-text-align_center">
+                    <div class="slds-text-heading_large">{linesPerOrder}</div>
+                    <div class="slds-text-body_small">Lines/Order</div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <div class="slds-text-align_center">
+                    <div class="slds-text-heading_large">{promoUptake}%</div>
+                    <div class="slds-text-body_small">Promo Uptake</div>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

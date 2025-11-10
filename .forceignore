@@ -1,0 +1,22 @@
+# LWC
+**/__tests__/**
+**/__mocks__/**
+**/.eslintrc.json
+
+# Apex
+**/__tests__/**
+**/__mocks__/**
+
+# Misc
+**/.DS_Store
+**/node_modules
+**/.sfdx
+**/.vscode
+**/.idea
+
+# CI
+**/.github
+
+# Mobile
+**/mobile/**
+**/mobile/**/*

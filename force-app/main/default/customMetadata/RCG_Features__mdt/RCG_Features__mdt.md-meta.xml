@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://www.soap.sforce.com/2006/04/metadata">
+    <label>RCG Features</label>
+    <pluralLabel>RCG Features</pluralLabel>
+    <description>Feature flags for RCG functionality</description>
+    <visibility>Public</visibility>
+    <fields>
+        <fullName>VisionAI__c</fullName>
+        <label>Vision AI</label>
+        <required>false</required>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+    </fields>
+    <fields>
+        <fullName>AutoReplenishment__c</fullName>
+        <label>Auto Replenishment</label>
+        <required>false</required>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+    </fields>
+    <fields>
+        <fullName>Collections__c</fullName>
+        <label>Collections</label>
+        <required>false</required>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+    </fields>
+    <fields>
+        <fullName>CreditHold__c</fullName>
+        <label>Credit Hold</label>
+        <required>false</required>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+    </fields>
+</CustomObject>

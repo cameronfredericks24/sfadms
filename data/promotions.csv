@@ -1,0 +1,5 @@
+Name,ProgramType,BudgetAmount,StartDate,EndDate,Channel,TargetBrands
+Promo 1,Volume,10000,2024-01-01,2024-03-31,Modern Trade,Brand A
+Promo 2,Visibility,5000,2024-02-01,2024-04-30,General Trade,Brand B
+Promo 3,Consumer,7500,2024-03-01,2024-05-31,Modern Trade,Brand C
+Promo 4,Retailer,15000,2024-04-01,2024-06-30,All,Brand A;Brand B

@@ -1,0 +1,11 @@
+SKU,Name,Brand,Category,PackSize,UoM,TaxCategory,ShelfLifeDays
+PROD-001,Product 1,Brand A,Category 1,12,EA,Standard,365
+PROD-002,Product 2,Brand A,Category 1,24,EA,Standard,365
+PROD-003,Product 3,Brand B,Category 2,6,EA,Standard,180
+PROD-004,Product 4,Brand B,Category 2,12,EA,Standard,180
+PROD-005,Product 5,Brand C,Category 3,24,EA,Standard,365
+PROD-006,Product 6,Brand C,Category 3,12,EA,Standard,365
+PROD-007,Product 7,Brand A,Category 1,6,EA,Standard,365
+PROD-008,Product 8,Brand B,Category 2,24,EA,Standard,180
+PROD-009,Product 9,Brand C,Category 3,12,EA,Standard,365
+PROD-010,Product 10,Brand A,Category 1,24,EA,Standard,365

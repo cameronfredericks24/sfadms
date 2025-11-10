@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://www.soap.sforce.com/2006/04/metadata">
+    <activeSiteAsHomeDefault>false</activeSiteAsHomeDefault>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <description>Distributor Portal for self-service operations</description>
+    <enableInvitation>false</enableInvitation>
+    <label>Distributor Portal</label>
+    <loginUrl>https://login.salesforce.com</loginUrl>
+    <logoutUrl>https://login.salesforce.com</logoutUrl>
+    <selfRegistration>false</selfRegistration>
+    <urlPathPrefix>distributor</urlPathPrefix>
+    <allowInternalUserLogin>true</allowInternalUserLogin>
+    <allowMembersToSelfRegister>false</allowMembersToSelfRegister>
+    <allowStandardPortalUsers>false</allowStandardPortalUsers>
+    <analyticsTrackingEnabled>true</analyticsTrackingEnabled>
+    <branding>
+        <headerColor>#0176D3</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </branding>
+    <chatterAnswersFacebookSsoUrl>https://login.salesforce.com</chatterAnswersFacebookSsoUrl>
+    <communityRoles>
+        <role>Admin</role>
+    </communityRoles>
+    <description>Distributor Portal</description>
+    <emailAdministrators>true</emailAdministrators>
+    <enableChatterAnswers>false</enableChatterAnswers>
+    <enablePrivateQuestions>false</enablePrivateQuestions>
+    <enableReputation>false</enableReputation>
+    <membersCanShare>true</membersCanShare>
+    <navigationLinkSet>Distributor_Portal_Navigation</navigationLinkSet>
+    <networkMemberGroups>
+        <permissionSetGroup>RCG_Distributor_Admin</permissionSetGroup>
+    </networkMemberGroups>
+    <networkPageAssignments>
+        <page>Distributor_Portal_Home</page>
+        <pageTemplate>Distributor_Portal_Template</pageTemplate>
+    </networkPageAssignments>
+    <networkTabs>
+        <label>GRN</label>
+        <name>GRN__c</name>
+        <type>CustomObject</type>
+    </networkTabs>
+    <networkTabs>
+        <label>Inventory Ledger</label>
+        <name>InventoryLedger__c</name>
+        <type>CustomObject</type>
+    </networkTabs>
+    <networkTabs>
+        <label>Primary Order</label>
+        <name>PrimaryOrder__c</name>
+        <type>CustomObject</type>
+    </networkTabs>
+    <networkTabs>
+        <label>Replenishment Proposal</label>
+        <name>ReplenishmentProposal__c</name>
+        <type>CustomObject</type>
+    </networkTabs>
+    <networkTabs>
+        <label>Claim</label>
+        <name>Claim__c</name>
+        <type>CustomObject</type>
+    </networkTabs>
+    <networkTabs>
+        <label>Invoice</label>
+        <name>Invoice__c</name>
+        <type>CustomObject</type>
+    </networkTabs>
+    <sharingSets>
+        <name>Distributor_Sharing_Set</name>
+    </sharingSets>
+    <siteAsContainerEnabled>true</siteAsContainerEnabled>
+    <status>Live</status>
+    <template>CustomerService</template>
+    <urlPathPrefix>distributor</urlPathPrefix>
+</Network>

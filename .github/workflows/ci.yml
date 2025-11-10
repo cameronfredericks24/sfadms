@@ -1,0 +1,63 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  lint:
+    name: Lint Code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install
+      - name: Lint Apex
+        run: sf apex run pmd --rulesets .pmd/apex-ruleset.xml || true
+      - name: Lint LWC
+        run: npm run lint:lwc || true
+
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Salesforce CLI
+        uses: salesforce-actions/setup-sfdx@v1
+      - name: Authenticate org
+        run: |
+          echo $SF_USERNAME
+          echo $SF_ORG_ALIAS
+        env:
+          SF_USERNAME: ${{ secrets.SF_USERNAME }}
+          SF_ORG_ALIAS: test-org
+      - name: Run tests
+        run: sf apex run test --code-coverage --result-format json --wait 10
+      - name: Check coverage
+        run: |
+          coverage=$(sf apex run test --code-coverage --result-format json --wait 10 | jq '.result.summary.coveredPercent')
+          if (( $(echo "$coverage < 85" | bc -l) )); then
+            echo "Coverage $coverage% is below 85%"
+            exit 1
+          fi
+
+  deploy:
+    name: Deploy to Scratch Org
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Salesforce CLI
+        uses: salesforce-actions/setup-sfdx@v1
+      - name: Create scratch org
+        run: sf org create scratch -f config/project-scratch-def.json -a ci-org -y 1
+      - name: Deploy metadata
+        run: sf project deploy start -d force-app
+      - name: Run tests
+        run: sf apex run test --code-coverage --wait 10

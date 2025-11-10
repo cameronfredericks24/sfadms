@@ -1,0 +1,34 @@
+{
+  "plans": [
+    {
+      "sobject": "Account",
+      "saveRefs": true,
+      "resolveRefs": true,
+      "files": ["distributors.csv", "retailers.csv"]
+    },
+    {
+      "sobject": "Product2",
+      "saveRefs": true,
+      "resolveRefs": true,
+      "files": ["products.csv"]
+    },
+    {
+      "sobject": "BatchLot__c",
+      "saveRefs": true,
+      "resolveRefs": true,
+      "files": ["batchlots.csv"]
+    },
+    {
+      "sobject": "Promotion__c",
+      "saveRefs": true,
+      "resolveRefs": true,
+      "files": ["promotions.csv"]
+    },
+    {
+      "sobject": "ReplenishmentPolicy__c",
+      "saveRefs": true,
+      "resolveRefs": true,
+      "files": ["replenishment-policies.csv"]
+    }
+  ]
+}
