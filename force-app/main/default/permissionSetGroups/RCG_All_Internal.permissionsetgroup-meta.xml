@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://www.salesforce.com/2006/04/metadata">
+    <description>Permission Set Group bundling ASM, TPM, and Finance permissions</description>
+    <label>RCG All Internal</label>
+    <permissionSets>
+        <permissionSet>RCG_ASM_Manager</permissionSet>
+        <permissionSet>RCG_TPM_Manager</permissionSet>
+        <permissionSet>RCG_Finance_Settlement</permissionSet>
+    </permissionSets>
+</PermissionSetGroup>

@@ -1,0 +1,39 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  lint:
+    name: Lint Code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: salesforce/setup-sfdx@v1
+      - name: Run PMD
+        run: sf apex run pmd --format json --output-dir .pmd-results || true
+      - name: Run ESLint
+        run: sf project run lint --source-dir force-app/main/default/lwc || true
+
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: salesforce/setup-sfdx@v1
+      - name: Create Scratch Org
+        run: sf org create scratch -f config/project-scratch-def.json -a ci-test -y 1
+      - name: Deploy Metadata
+        run: sf project deploy start -o ci-test
+      - name: Run Tests
+        run: sf apex run test --code-coverage --result-format json --wait 10 --result-format human
+      - name: Check Coverage
+        run: |
+          COVERAGE=$(sf apex run test --code-coverage --result-format json --wait 10 | jq -r '.result.summary.testRunCoverage')
+          if (( $(echo "$COVERAGE < 85" | bc -l) )); then
+            echo "Coverage $COVERAGE% is below 85% threshold"
+            exit 1
+          fi

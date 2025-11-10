@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://www.salesforce.com/2006/04/metadata">
+    <fullName>NetAmount_Non_Negative</fullName>
+    <active>true</active>
+    <description>Net Amount must be non-negative</description>
+    <errorConditionFormula>NOT(ISBLANK(NetAmount__c)) &amp;&amp; NetAmount__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>NetAmount__c</errorDisplayField>
+    <errorMessage>Net Amount must be non-negative</errorMessage>
+</ValidationRule>

@@ -1,0 +1,33 @@
+{
+  "orgName": "RCG Retail Execution DMS",
+  "edition": "Enterprise",
+  "features": [
+    "EnableSetPasswordInApi",
+    "ServiceCloud",
+    "FieldService",
+    "Communities",
+    "AnalyticsIntegration",
+    "EinsteinBuilderFree",
+    "PlatformEncryption"
+  ],
+  "settings": {
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": true
+    },
+    "securitySettings": {
+      "enableAdminLoginAsAnyUser": true
+    },
+    "chatterSettings": {
+      "enableChatter": true
+    },
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "fieldServiceSettings": {
+      "enableWorkOrders": true
+    }
+  }
+}

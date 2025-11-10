@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://www.salesforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>true</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restrictedPicklist>true</restrictedPicklist>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Promo</fullName>
+                <default>False</default>
+                <label>Promo</label>
+            </value>
+            <value>
+                <fullName>Damage</fullName>
+                <default>False</default>
+                <label>Damage</label>
+            </value>
+            <value>
+                <fullName>Expiry</fullName>
+                <default>False</default>
+                <label>Expiry</label>
+            </value>
+            <value>
+                <fullName>Short</fullName>
+                <default>False</default>
+                <label>Short</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

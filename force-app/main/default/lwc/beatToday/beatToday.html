@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Today's Beat">
+        <template if:true={error}>
+            <p>Error loading routes</p>
+        </template>
+        <template if:true={hasRoutes}>
+            <template for:each={routes} for:item="route">
+                <div key={route.Id} class="slds-p-around_small">
+                    <lightning-button label="Check In" data-route-id={route.Id} onclick={handleCheckIn}></lightning-button>
+                    {route.Name}
+                </div>
+            </template>
+        </template>
+        <template if:false={hasRoutes}>
+            <p>No routes scheduled for today</p>
+        </template>
+    </lightning-card>
+</template>

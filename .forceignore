@@ -1,0 +1,11 @@
+# .forceignore
+**/node_modules/**
+**/.git/**
+**/.sfdx/**
+**/.vscode/**
+**/coverage/**
+**/mobile/node_modules/**
+**/mobile/.git/**
+**/mobile/ios/Pods/**
+**/mobile/android/.gradle/**
+**/mobile/android/app/build/**

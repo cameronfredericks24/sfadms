@@ -1,0 +1,39 @@
+{
+  "planName": "RCG Data Seed Plan",
+  "objects": [
+    {
+      "referenceId": "ProductRef",
+      "csvFile": "products.csv",
+      "operation": "upsert",
+      "externalIdField": "ProductCode",
+      "sfObject": "Product2",
+      "fields": {
+        "Name": "Name",
+        "ProductCode": "SKU",
+        "Brand__c": "Brand",
+        "Category__c": "Category",
+        "PackSize__c": "PackSize"
+      }
+    },
+    {
+      "referenceId": "DistributorRef",
+      "csvFile": "distributors.csv",
+      "operation": "upsert",
+      "externalIdField": "Name",
+      "sfObject": "Account",
+      "fields": {
+        "Name": "Name"
+      }
+    },
+    {
+      "referenceId": "RetailerRef",
+      "csvFile": "retailers.csv",
+      "operation": "upsert",
+      "externalIdField": "Name",
+      "sfObject": "Account",
+      "fields": {
+        "Name": "Name"
+      }
+    }
+  ]
+}
