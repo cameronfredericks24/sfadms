@@ -1,0 +1,28 @@
+{
+  "plans": [
+    {
+      "sobject": "Account",
+      "saveRefs": true,
+      "resolveRefs": false,
+      "files": ["distributors.csv"]
+    },
+    {
+      "sobject": "Account",
+      "saveRefs": true,
+      "resolveRefs": false,
+      "files": ["retailers.csv"]
+    },
+    {
+      "sobject": "Product2",
+      "saveRefs": true,
+      "resolveRefs": false,
+      "files": ["products.csv"]
+    },
+    {
+      "sobject": "Promotion__c",
+      "saveRefs": true,
+      "resolveRefs": false,
+      "files": ["promotions.csv"]
+    }
+  ]
+}

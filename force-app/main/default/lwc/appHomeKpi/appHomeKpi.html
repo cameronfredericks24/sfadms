@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Today's Performance" icon-name="standard:metrics">
+        <lightning-button-icon 
+            icon-name="utility:refresh"
+            variant="bare"
+            alternative-text="Refresh"
+            onclick={handleRefresh}
+            slot="actions">
+        </lightning-button-icon>
+
+        <div class="slds-p-around_medium">
+            <div class="slds-grid slds-wrap slds-grid_align-spread">
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4 slds-p-around_small">
+                    <div class="slds-box slds-text-align_center kpi-tile">
+                        <p class="slds-text-heading_large slds-text-color_success">{coverage}%</p>
+                        <p class="slds-text-body_small">Coverage</p>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4 slds-p-around_small">
+                    <div class="slds-box slds-text-align_center kpi-tile">
+                        <p class="slds-text-heading_large slds-text-color_success">{dropSize}</p>
+                        <p class="slds-text-body_small">Avg Drop Size</p>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4 slds-p-around_small">
+                    <div class="slds-box slds-text-align_center kpi-tile">
+                        <p class="slds-text-heading_large">{linesPerOrder}</p>
+                        <p class="slds-text-body_small">Lines/Order</p>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4 slds-p-around_small">
+                    <div class="slds-box slds-text-align_center kpi-tile">
+                        <p class="slds-text-heading_large slds-text-color_warning">{promoUptake}%</p>
+                        <p class="slds-text-body_small">Promo Uptake</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

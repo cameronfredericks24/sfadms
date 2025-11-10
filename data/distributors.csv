@@ -1,0 +1,4 @@
+Name,Type,BillingStreet,BillingCity,BillingState,BillingPostalCode,Phone
+"Metro Distributors Inc","Distributor","123 Main St","New York","NY","10001","212-555-0100"
+"EastCoast Supply Co","Distributor","456 Market Ave","Boston","MA","02101","617-555-0200"
+"MidWest Distribution","Distributor","789 Commerce Blvd","Chicago","IL","60601","312-555-0300"

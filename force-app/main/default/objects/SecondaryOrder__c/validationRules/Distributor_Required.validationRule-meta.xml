@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distributor_Required</fullName>
+    <active>true</active>
+    <description>Distributor is required for all secondary orders</description>
+    <errorConditionFormula>ISBLANK(Distributor__c)</errorConditionFormula>
+    <errorMessage>Distributor is required for secondary orders</errorMessage>
+</ValidationRule>

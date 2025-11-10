@@ -1,0 +1,109 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run LWC ESLint
+        run: npm run lint:lwc || true
+      
+      - name: Setup Java for PMD
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      
+      - name: Run Apex PMD
+        run: npm run lint:apex || true
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run LWC Jest Tests
+        run: npm run test:unit:coverage
+      
+      - name: Upload coverage
+        uses: actions/upload-artifact@v3
+        with:
+          name: lwc-coverage
+          path: coverage/
+      
+      - name: Install Salesforce CLI
+        run: npm install -g @salesforce/cli
+      
+      - name: Authenticate to DevHub
+        run: |
+          echo "${{ secrets.SFDX_AUTH_URL }}" > auth.txt
+          sf org login sfdx-url --sfdx-url-file auth.txt --set-default-dev-hub --alias devhub
+        if: github.event_name == 'push'
+      
+      - name: Create Scratch Org
+        run: sf org create scratch -f config/project-scratch-def.json -a ci-scratch -y 1 -w 10
+        if: github.event_name == 'push'
+      
+      - name: Deploy to Scratch Org
+        run: sf project deploy start -o ci-scratch -d force-app
+        if: github.event_name == 'push'
+      
+      - name: Run Apex Tests
+        run: sf apex run test -o ci-scratch --code-coverage --result-format json --wait 20 > test-results.json
+        if: github.event_name == 'push'
+      
+      - name: Check Code Coverage
+        run: |
+          COVERAGE=$(cat test-results.json | jq '.summary.testRunCoverage' | tr -d '"' | cut -d'%' -f1)
+          echo "Code coverage: $COVERAGE%"
+          if [ ${COVERAGE%.*} -lt 85 ]; then
+            echo "Code coverage is below 85%"
+            exit 1
+          fi
+        if: github.event_name == 'push'
+      
+      - name: Delete Scratch Org
+        run: sf org delete scratch -o ci-scratch --no-prompt
+        if: always() && github.event_name == 'push'
+
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Check formatting
+        run: npm run prettier:verify

@@ -1,0 +1,6 @@
+Name,ProgramType__c,BudgetAmount__c,StartDate__c,EndDate__c,Channel__c,Active__c
+"Summer Volume Discount","Volume",50000,"2025-06-01","2025-08-31","Modern Trade",TRUE
+"Back to School Bundle","Consumer",30000,"2025-08-15","2025-09-15","All Channels",TRUE
+"Holiday Visibility Program","Visibility",25000,"2025-11-01","2025-12-31","Traditional Trade",TRUE
+"New Product Launch","Retailer",40000,"2025-07-01","2025-07-31","Modern Trade",TRUE
+"Year-End Clearance","Volume",60000,"2025-12-01","2025-12-31","All Channels",TRUE

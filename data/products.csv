@@ -1,0 +1,31 @@
+Name,ProductCode,Family,Description,IsActive
+"Coca-Cola 500ml","SKU-CC-500","Beverages","Coca-Cola 500ml Bottle",TRUE
+"Pepsi 500ml","SKU-PP-500","Beverages","Pepsi 500ml Bottle",TRUE
+"Lays Classic 50g","SKU-LC-50","Snacks","Lays Classic Chips 50g",TRUE
+"Doritos Nacho 50g","SKU-DN-50","Snacks","Doritos Nacho Cheese 50g",TRUE
+"Sprite 500ml","SKU-SP-500","Beverages","Sprite 500ml Bottle",TRUE
+"Fanta Orange 500ml","SKU-FO-500","Beverages","Fanta Orange 500ml Bottle",TRUE
+"Mountain Dew 500ml","SKU-MD-500","Beverages","Mountain Dew 500ml Bottle",TRUE
+"7Up 500ml","SKU-7U-500","Beverages","7Up 500ml Bottle",TRUE
+"Cheetos Flamin Hot 50g","SKU-CF-50","Snacks","Cheetos Flamin Hot 50g",TRUE
+"Pringles Original 150g","SKU-PO-150","Snacks","Pringles Original 150g",TRUE
+"Ruffles Cheddar 50g","SKU-RC-50","Snacks","Ruffles Cheddar 50g",TRUE
+"KitKat 45g","SKU-KK-45","Chocolate","KitKat 4 Finger 45g",TRUE
+"Snickers 50g","SKU-SN-50","Chocolate","Snickers Bar 50g",TRUE
+"Mars 50g","SKU-MR-50","Chocolate","Mars Bar 50g",TRUE
+"Twix 50g","SKU-TW-50","Chocolate","Twix Bar 50g",TRUE
+"Milky Way 45g","SKU-MW-45","Chocolate","Milky Way Bar 45g",TRUE
+"Bounty 57g","SKU-BT-57","Chocolate","Bounty Bar 57g",TRUE
+"M&M Peanut 45g","SKU-MM-45","Chocolate","M&M Peanut 45g",TRUE
+"Nestle Water 500ml","SKU-NW-500","Water","Nestle Pure Life 500ml",TRUE
+"Aquafina 500ml","SKU-AQ-500","Water","Aquafina 500ml",TRUE
+"Red Bull 250ml","SKU-RB-250","Energy Drinks","Red Bull Energy 250ml",TRUE
+"Monster Energy 500ml","SKU-ME-500","Energy Drinks","Monster Energy 500ml",TRUE
+"Gatorade Blue 500ml","SKU-GB-500","Sports Drinks","Gatorade Blue Bolt 500ml",TRUE
+"Powerade Orange 500ml","SKU-PO-500","Sports Drinks","Powerade Orange 500ml",TRUE
+"Lipton Ice Tea 500ml","SKU-LI-500","Tea","Lipton Lemon Ice Tea 500ml",TRUE
+"Nestea Peach 500ml","SKU-NP-500","Tea","Nestea Peach 500ml",TRUE
+"Tropicana Orange 1L","SKU-TO-1L","Juice","Tropicana Orange Juice 1L",TRUE
+"Minute Maid Apple 1L","SKU-MA-1L","Juice","Minute Maid Apple Juice 1L",TRUE
+"Del Monte Pineapple 1L","SKU-DP-1L","Juice","Del Monte Pineapple 1L",TRUE
+"Dole Mixed Fruit 1L","SKU-DM-1L","Juice","Dole Mixed Fruit 1L",TRUE

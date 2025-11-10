@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qty_NotZero</fullName>
+    <active>true</active>
+    <description>Quantity cannot be zero</description>
+    <errorConditionFormula>Qty__c = 0</errorConditionFormula>
+    <errorDisplayField>Qty__c</errorDisplayField>
+    <errorMessage>Quantity cannot be zero for ledger entries</errorMessage>
+</ValidationRule>

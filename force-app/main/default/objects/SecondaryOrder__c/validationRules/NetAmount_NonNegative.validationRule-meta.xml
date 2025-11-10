@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NetAmount_NonNegative</fullName>
+    <active>true</active>
+    <description>Net amount must be non-negative</description>
+    <errorConditionFormula>NetAmount__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>NetAmount__c</errorDisplayField>
+    <errorMessage>Net amount cannot be negative</errorMessage>
+</ValidationRule>

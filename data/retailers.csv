@@ -1,0 +1,11 @@
+Name,Type,BillingStreet,BillingCity,BillingState,BillingPostalCode,Phone,ShippingLatitude,ShippingLongitude
+"7-Eleven Store #101","Retailer","10 Broadway","New York","NY","10001","212-555-1001",40.7128,-74.0060
+"7-Eleven Store #102","Retailer","25 Park Ave","New York","NY","10016","212-555-1002",40.7484,-73.9857
+"Family Mart #201","Retailer","50 Main St","Brooklyn","NY","11201","718-555-2001",40.6782,-73.9442
+"Quick Stop #301","Retailer","100 State St","Boston","MA","02109","617-555-3001",42.3601,-71.0589
+"Corner Store #401","Retailer","200 Congress St","Boston","MA","02110","617-555-4001",42.3554,-71.0514
+"Mini Mart #501","Retailer","300 Boylston St","Boston","MA","02116","617-555-5001",42.3505,-71.0763
+"Express Shop #601","Retailer","400 Michigan Ave","Chicago","IL","60611","312-555-6001",41.8781,-87.6298
+"Quick Mart #701","Retailer","500 State St","Chicago","IL","60605","312-555-7001",41.8756,-87.6244
+"Speedy Stop #801","Retailer","600 Wacker Dr","Chicago","IL","60606","312-555-8001",41.8866,-87.6394
+"City Convenience #901","Retailer","700 Clark St","Chicago","IL","60610","312-555-9001",41.8947,-87.6316
